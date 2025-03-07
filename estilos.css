@@ -1,0 +1,61 @@
+/* Hace que el body ocupe toda la pantalla */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Evita desplazamientos laterales */
+}
+
+/* Contenedor que ocupa toda la pantalla */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+}
+
+/* Imagen de fondo */
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+/* Texto centrado */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Color del texto */
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Sección del mapa */
+.map-section {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.map-section h2 {
+    margin-bottom: 10px;
+}
+
+/* Contenedor del mapa */
+#map {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
