@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch("suba.geojson")
         .then(response => response.json())
         .then(data => {
-            L.geoJSON(data, {
+            let subaLayer = L.geoJSON(data, {
                 style: {
                     color: "red",  // Color del borde
                     weight: 2,       // Grosor de la línea
@@ -57,9 +57,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     fillOpacity: 0.4  // Opacidad del relleno
                 }
             }).addTo(mapSuba);
+
+            // ------------------- IMAGEN LANDSAT 8 -------------------
+            // URL del servicio WMS de Landsat
+            let landsatURL = "https://landsatlook.usgs.gov/arcgis/services/LandsatLook/ImageServer/WMSServer";
+
+
+            let landsatLayer = L.tileLayer.wms(landsatURL, {
+                layers: "0", // Selecciona la capa correcta (puedes cambiarlo si es necesario)
+                format: "image/png",
+                transparent: true,
+                attribution: "Landsat 8 - Esri"
+            });
+
+            // Agregar la imagen de Landsat sobre el mapa de Suba
+            landsatLayer.addTo(mapSuba);
+
+            // Ajustar la imagen a los límites del polígono de Suba
+            mapSuba.fitBounds(subaLayer.getBounds());
         })
         .catch(error => console.error("Error al cargar suba.geojson:", error));
 });
+
+
 
 
 
