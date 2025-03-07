@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Barrio - Costa Azul</title>
-    <link rel="stylesheet" href="estilos.css"> <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> <!-- Estilos de Leaflet -->
+    
+    <!-- Enlace a estilos CSS -->
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Enlace a Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
 
@@ -18,15 +22,24 @@
         </div>
     </div>
 
-    <!-- Sección del mapa -->
+    <!-- Sección del mapa de Costa Azul -->
     <section class="map-section">
         <h2>Ubicación de Costa Azul</h2>
-        <div id="map"></div>
+        <div id="map-costa"></div>
     </section>
 
-    <!-- Script de Leaflet -->
+    <!-- Sección del mapa de Suba -->
+    <section class="map-section">
+        <h2>Localidad de Suba</h2>
+        <div id="map-suba"></div>
+    </section>
+
+    <!-- Enlace a Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script> <!-- Archivo de JavaScript externo -->
+
+    <!-- Enlace al script principal -->
+    <script src="script.js"></script>
+
 </body>
 </html>
 

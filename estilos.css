@@ -39,23 +39,20 @@ body, html {
     border-radius: 15px;
 }
 
-/* Sección del mapa */
+/* Sección de mapas */
 .map-section {
     text-align: center;
     padding: 20px;
     background: #f4f4f4;
 }
 
-.map-section h2 {
-    margin-bottom: 10px;
-}
-
-/* Contenedor del mapa */
-#map {
+/* Estilo para los mapas */
+#map-costa, #map-suba {
     width: 80%;
     height: 500px;
     margin: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 
